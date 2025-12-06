@@ -1,4 +1,7 @@
 import Image from "next/image";
+import heroVehicle from "@/img/at-1.jpeg";
+import fleetInterior from "@/img/at-2.jpeg";
+import aswanaLogo from "@/img/logo-at.jpeg";
 
 const HIGHLIGHTS = [
   {
@@ -28,9 +31,12 @@ export default function Home() {
       <div className="relative z-10 mx-auto flex min-h-screen w-full max-w-6xl flex-col px-6 pb-16 pt-10 sm:px-10 lg:px-12">
         <header className="flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <span className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-emerald-600 text-lg font-semibold text-white shadow-lg shadow-emerald-600/30">
-              AT
-            </span>
+            <Image
+              src={aswanaLogo}
+              alt="Aswana Trans logo"
+              className="h-12 w-auto rounded-xl shadow-lg shadow-emerald-600/30"
+              priority
+            />
             <div>
               <p className="text-base font-semibold tracking-[0.2em] text-emerald-700">
                 Aswana Trans
@@ -138,8 +144,8 @@ export default function Home() {
 
             <div className="relative aspect-[4/5] overflow-hidden rounded-[32px] border border-emerald-100 bg-white/90 shadow-xl shadow-emerald-100">
               <Image
-                src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&q=80&w=1200"
-                alt="Armada van putih Aswana Trans siap beroperasi"
+                src={heroVehicle}
+                alt="Armada Aswana Trans siap beroperasi"
                 fill
                 className="object-cover"
                 priority
@@ -149,8 +155,8 @@ export default function Home() {
             <div className="relative -bottom-16 ml-auto mr-6 w-60 max-w-[60%] rounded-[28px] border border-emerald-100 bg-white shadow-2xl shadow-emerald-100 sm:mr-10">
               <div className="relative aspect-[4/5] overflow-hidden rounded-[28px]">
                 <Image
-                  src="https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&q=80&w=800"
-                  alt="Interior kendaraan nyaman untuk perjalanan wisata"
+                  src={fleetInterior}
+                  alt="Interior kendaraan Aswana Trans yang nyaman"
                   fill
                   className="object-cover"
                 />
